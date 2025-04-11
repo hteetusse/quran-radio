@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: quran-radio
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: false
